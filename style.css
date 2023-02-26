@@ -1,0 +1,45 @@
+:root{
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+}
+.card{
+    display: flex;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 0px 24px 8px #BFBFBF; 
+    box-shadow: 0px 0px 24px 8px #BFBFBF;
+    overflow: hidden;
+    margin: 5% 5% auto;
+    flex-direction: column;
+    
+}
+.image-card{
+    display: flex;
+    flex-basis: 50%;
+}
+.details-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-basis: 50%;
+}
