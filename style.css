@@ -6,14 +6,37 @@
 --Dark-grayish-blue: hsl(228, 12%, 48%);
 --White: hsl(0, 0%, 100%);
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+ 
+  html, body {
+    height: 100%;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+ 
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
 html{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: 'Fraunces', serif;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    height: 100%;
+    
 }
 body{
     min-height: 100%;
@@ -21,10 +44,12 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--Cream);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 .card{
     display: flex;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     -webkit-box-shadow: 0px 0px 24px 8px #BFBFBF; 
     box-shadow: 0px 0px 24px 8px #BFBFBF;
     overflow: hidden;
@@ -36,10 +61,44 @@ body{
     display: flex;
     flex-basis: 50%;
 }
-.details-card{
-    display: flex;
+.image-card image{
+    background: url(./images/image-product-mobile.jpg) repeat;
+    background-size: contain;
+    background-position: center;
+    min-width: 300px;
+}
+.detail-card{
+    /*display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-basis: 50%;
+    flex-direction: column;*/
+
+    --content-padding:1.5rem;
+    --content-spacing: 1rem;
+    
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+}
+.price-group{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+@media (min-width: 375px){
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .image-card{
+        background: url(./images/image-product-desktop.jpg) no-repeat ;
+        background-size: contain;
+    }
+    .details-card{
+        display: flex;
+        flex-basis: 50%;
+    }
 }
